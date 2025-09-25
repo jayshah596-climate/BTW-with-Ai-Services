@@ -969,19 +969,25 @@ select.form-control {
   font-size: var(--font-size-lg);
 }
 
-.tools-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: var(--space-24);
+.tools-grid.parallel-tools {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .tool-card {
-  background: var(--color-surface);
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--color-card-border);
-  padding: var(--space-24);
-  transition: transform var(--duration-normal) var(--ease-standard), box-shadow var(--duration-normal) var(--ease-standard);
-  position: relative;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    padding: 2rem 1.5rem;
+    flex: 1 1 320px;
+    min-width: 280px;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 2rem;
 }
 
 .tool-card:hover {
@@ -1008,11 +1014,9 @@ select.form-control {
 }
 
 .tool-header h4 {
-  font-size: var(--font-size-lg);
-  color: var(--color-text);
-  font-weight: var(--font-weight-semibold);
-  margin: 0;
-  flex-grow: 1;
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+    font-weight: 600;
 }
 
 .tool-badge {
@@ -1042,9 +1046,8 @@ select.form-control {
 }
 
 .tool-features {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 var(--space-20) 0;
+    margin: 1rem 0;
+    padding-left: 1.2rem;
 }
 
 .tool-features li {
@@ -1063,15 +1066,20 @@ select.form-control {
   font-weight: var(--font-weight-bold);
 }
 
-.access-note,
-.customization-note {
-  font-size: var(--font-size-xs);
-  color: var(--color-text-secondary);
-  margin-top: var(--space-8);
-  font-style: italic;
-  text-align: center;
+.access-note {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #707070;
 }
-
+media (max-width: 1000px) {
+    .tools-grid.parallel-tools {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .tool-card {
+        max-width: 100%;
+    }
+}
 .customization-note strong {
   color: var(--color-primary);
 }
