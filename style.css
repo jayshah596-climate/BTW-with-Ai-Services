@@ -970,14 +970,14 @@ select.form-control {
 }
 
 .tools-grid.parallel-tools {
-    display: grid;
-    gap: 2rem;
-grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    align-items: stretch;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  align-items: stretch;
 }
 
 .premium-tools-section .tools-grid.parallel-tools {
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+ grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 }
 
 .tool-card {
@@ -998,9 +998,9 @@ grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
 @media (min-width: 1024px) {
-    .premium-tools-section .tools-grid.parallel-tools {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
+  .premium-tools-section .tools-grid.parallel-tools {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
 .tool-card:hover {
