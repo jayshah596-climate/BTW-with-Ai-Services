@@ -977,7 +977,11 @@ select.form-control {
 }
 
 .premium-tools-section .tools-grid.parallel-tools {
- grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.premium-tools-section .tools-grid.parallel-tools.two-column {
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 }
 
 .tool-card {
@@ -1000,6 +1004,10 @@ select.form-control {
 @media (min-width: 1024px) {
   .premium-tools-section .tools-grid.parallel-tools {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  
+  .premium-tools-section .tools-grid.parallel-tools.two-column {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
